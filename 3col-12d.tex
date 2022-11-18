@@ -1,0 +1,50 @@
+% With some useful information from
+% https://tex.stackexchange.com/questions/371914/problem-with-writing-chess-moves-in-skak
+
+\documentclass[10pt]{article}
+\usepackage{multicol}
+\setlength{\columnsep}{1cm}
+% \setlength{\columnseprule}{1pt}
+\usepackage[margin=0.5in,text={8.0in,13.5in},centering]{geometry}
+\usepackage[document]{ragged2e} % to fix alignment issues in position heading
+\raggedcolumns % to fix vertical alignment issues in multicol package
+\usepackage{chessboard}
+\usepackage{xskak}
+\usepackage{pifont}
+\setchessboard{
+  smallboard,
+  marginleftwidth=0pt,
+  showmover=true,
+%  moverstyle=circle,
+  moversize=1.5ex
+}
+
+\begin{document}
+
+\begin{multicols*}{3}
+
+    \begin{enumerate}
+
+    \item Karpov-Heubner (1979) 1-0  \fenboard{2R5/3qb1k1/1r4pp/p2Bp3/1p2P3/1P1Q2PP/P5K1/8 w - - 0 1} \chessboard
+    \item Karpov-Sergijewski (1970) 1-0 \fenboard{3r4/5ppp/pkpbpnn1/8/2P2P2/2N3PP/PPK3B1/4B2R w - - 0 1} \chessboard
+    \item Spassky-Geller (1965) 1-0 \fenboard{r2qrbk1/5ppp/pn1p4/np2P1P1/3p4/5N2/PPB2PP1/R1BQR1K1 w - - 0 1} \chessboard
+    \item Andruet-Spassky (1988) 0-1 \fenboard{4r1k1/3b1p2/5qp1/1BPpn2p/7n/r3P1N1/2Q1RPPP/1R3NK1 b - - 0 1} \chessboard
+      \columnbreak
+    \item Grigoriev (1925) 1/2-1/2 \fenboard{6K1/8/6k1/8/8/p7/P7/8 w - - 0 0} \chessboard
+    \item Grigoriev (1932) 1/2-1/2 \fenboard{7N/2K5/8/8/7p/2k5/8/8 w - - 0 0} \chessboard
+    \item Grigoriev (1935) 1-0 \fenboard{8/8/8/1k6/8/4p1P1/6P1/6K1 w - - 0 0} \chessboard
+    \item Grigoriev (1938) 1/2-1/2 \fenboard{8/8/8/1N1k4/1p6/8/7K/8 w - - 0 0} \chessboard
+      \columnbreak
+    \item Reti (1922) 1-0 \fenboard{8/8/2k4b/P7/8/8/2N2PKp/8 w - - 0 0} \chessboard
+    \item Reti (1929) 1-0  \fenboard{8/1K6/P7/kn6/4N3/8/8/8 b - - 0 0} \chessboard
+    \item Karpov-Taimanov (1977) 0-1 \fenboard{8/6k1/1P1p2p1/3Ppn2/3q4/8/6PP/rR2QB1K b - - 2 38} \chessboard
+    \item Paulsen-Morphy (1857) 0-1 \fenboard{r5k1/p1pb1ppp/1bp1r3/8/QP6/2Pq1B2/R2P1PPP/2B2RK1 b - - 0 16} \chessboard
+
+  \end{enumerate}
+\end{multicols*}
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
